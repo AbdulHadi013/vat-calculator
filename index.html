@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Work Out VAT in the UK (2026 Guide)</title>
+<meta name="description" content="A plain guide to working out VAT in the UK. Learn the 20%, 5% and 0% rates, how to add VAT to a price, how to remove it from a total, and when to register.">
+<meta name="robots" content="index, follow">
+
+<!-- Update this to your live Vercel address after the first deploy -->
+<link rel="canonical" href="https://REPLACE-WITH-YOUR-VERCEL-URL/">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="How to Work Out VAT in the UK (2026 Guide)">
+<meta property="og:description" content="Add VAT, remove VAT, and understand the UK rates with worked examples.">
+<meta name="twitter:card" content="summary">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I add 20% VAT to a price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the price before tax by 1.2. The result is the total including VAT, and the difference between the two figures is the VAT itself."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I remove VAT from a total?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the gross total by 1.2 for the standard rate. To find only the VAT inside the total, divide it by 6."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the current standard VAT rate in the UK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The standard rate is 20%. A reduced rate of 5% and a zero rate of 0% apply to certain goods and services."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I have to register for VAT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You must register once your taxable turnover goes over 90,000 pounds in any twelve month period. You can register voluntarily below that level if it suits your business."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between the net and gross price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The net price is the amount before VAT. The gross price is the amount once VAT has been added. The VAT itself is the difference between the two figures."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --bg:#ffffff;
+    --surface:#f5f8ff;
+    --ink:#0f1830;
+    --muted:#586179;
+    --accent:#3a5cff;
+    --accent-dark:#2440cc;
+    --line:#e6ebf5;
+    --call:#eef2ff;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.7;
+    font-size:18px;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent-dark);}
+
+  header.site{
+    position:sticky;top:0;z-index:20;
+    display:flex;align-items:center;gap:12px;
+    padding:14px 22px;
+    background:rgba(255,255,255,0.82);
+    backdrop-filter:saturate(180%) blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .logo{
+    display:grid;place-items:center;
+    width:38px;height:38px;border-radius:10px;
+    background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+    color:#fff;font-weight:800;font-size:14px;letter-spacing:.3px;
+  }
+  .brand{font-weight:700;font-size:17px;}
+  nav.top{margin-left:auto;display:flex;gap:22px;}
+  nav.top a{color:var(--muted);text-decoration:none;font-size:15px;font-weight:600;}
+  nav.top a:hover{color:var(--ink);}
+
+  .hero{
+    background:
+      radial-gradient(1100px 380px at 82% -10%,rgba(58,92,255,0.12),transparent 60%),
+      linear-gradient(180deg,var(--surface),#ffffff);
+    border-bottom:1px solid var(--line);
+    padding:64px 22px 46px;
+  }
+  .wrap{max-width:760px;margin:0 auto;}
+  .eyebrow{
+    display:inline-block;font-size:13px;font-weight:700;letter-spacing:.10em;
+    text-transform:uppercase;color:var(--accent-dark);
+    background:#e7edff;border:1px solid #d5deff;border-radius:999px;
+    padding:6px 14px;margin-bottom:18px;
+  }
+  h1{font-size:44px;line-height:1.12;margin:0 0 16px;letter-spacing:-.02em;}
+  .lead{font-size:20px;color:var(--muted);margin:0;}
+  .hero-cta{
+    display:inline-block;margin-top:24px;
+    background:#ffffff;border:1px solid #d9e0ff;border-left:4px solid var(--accent);
+    border-radius:12px;padding:14px 20px;font-size:17px;color:#26314f;
+    box-shadow:0 10px 26px rgba(58,92,255,0.12);
+  }
+  .hero-cta a{font-weight:800;color:var(--accent-dark);text-decoration:underline;text-underline-offset:3px;}
+
+  main{padding:14px 22px 40px;}
+  section{max-width:760px;margin:0 auto;}
+  h2{font-size:27px;line-height:1.25;margin:44px 0 12px;letter-spacing:-.01em;}
+  h3{font-size:19px;margin:22px 0 6px;}
+  p{margin:0 0 16px;}
+
+  .quick{
+    background:var(--call);
+    border:1px solid #d9e0ff;
+    border-radius:16px;
+    padding:22px 24px;
+    margin:30px 0 8px;
+  }
+  .quick h2{margin:0 0 10px;font-size:20px;}
+  .quick p{margin:0;color:#26314f;}
+  .quick strong{color:var(--accent-dark);}
+
+  table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:17px;}
+  th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);}
+  th{background:var(--surface);font-size:14px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);}
+  .table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:14px;}
+  .table-scroll table{margin:0;}
+  .table-scroll td:first-child{font-weight:700;}
+
+  .callout{
+    background:linear-gradient(180deg,#f4f7ff,#eef2ff);
+    border:1px solid #d9e0ff;
+    border-left:4px solid var(--accent);
+    border-radius:14px;
+    padding:22px 24px;
+    margin:26px 0;
+  }
+  .callout p{margin:0;}
+  .callout a{font-weight:800;color:var(--accent-dark);}
+
+  .example{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:14px 18px;margin:14px 0;
+    font-size:16px;
+  }
+  .example b{color:var(--ink);}
+
+  .faq h3{
+    font-size:19px;
+    margin:24px 0 4px;
+    padding-left:16px;
+    border-left:3px solid var(--accent);
+  }
+
+  footer{
+    border-top:1px solid var(--line);
+    background:var(--surface);
+    color:var(--muted);
+    font-size:14px;
+    padding:26px 22px;
+    text-align:center;
+  }
+  footer .wrap{max-width:760px;}
+
+  @media (max-width:640px){
+    body{font-size:17px;}
+    h1{font-size:33px;}
+    h2{font-size:23px;}
+    .lead{font-size:18px;}
+    nav.top{display:none;}
+    .hero{padding:44px 20px 34px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="logo">VAT</div>
+  <div class="brand">UK VAT Guide</div>
+  <nav class="top">
+    <a href="#rates">Rates</a>
+    <a href="#adding">Adding</a>
+    <a href="#removing">Removing</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">UK Tax Basics</span>
+    <h1>How to Work Out VAT in the UK</h1>
+    <p class="lead">VAT sounds simple until you have to add it to an invoice or strip it out of a receipt. This guide covers the rates, the exact sums, and the mistakes that catch most people out.</p>
+    <div class="hero-cta">Need the figure straight away? Try a free <a href="https://freevatcalculator.co.uk/">VAT Calculator</a> to add or remove VAT in one step.</div>
+  </div>
+</div>
+
+<main>
+  <section>
+    <div class="quick">
+      <h2>Quick answer</h2>
+      <p>To add 20% VAT, multiply the price by <strong>1.2</strong>. To remove 20% VAT from a total, divide it by <strong>1.2</strong>. To find just the VAT sitting inside a total, divide by <strong>6</strong>.</p>
+    </div>
+
+    <h2 id="what">What VAT actually is</h2>
+    <p>Value Added Tax is a charge added to most goods and services sold in the UK. The business collects it at the point of sale and then pays it over to HMRC. In practice the customer pays the tax and the business sits in the middle, between the shopper and the government. Most standard items carry VAT, though some things such as most food, children's clothes and books fall outside the standard charge. A registered business charges VAT on what it sells, known as output tax, and reclaims the VAT it pays on its own purchases, known as input tax. It then sends the difference to HMRC, which is why the tax does not pile up on itself as goods move along the chain.</p>
+
+    <h2 id="rates">The UK VAT rates</h2>
+    <p>There are three rates to know. The standard rate covers the large majority of goods and services. The reduced rate applies to a small group of items, and the zero rate applies to a set of everyday essentials. Zero rated is not the same as exempt. A zero rated sale still counts as a taxable sale, which matters when a business works out what it can claim back.</p>
+
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Rate</th><th>Percentage</th><th>Typical items</th></tr></thead>
+        <tbody>
+          <tr><td>Standard</td><td>20%</td><td>Most goods and services</td></tr>
+          <tr><td>Reduced</td><td>5%</td><td>Home energy, children's car seats, some mobility aids</td></tr>
+          <tr><td>Zero</td><td>0%</td><td>Most groceries, books, newspapers, children's clothing</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="adding">Adding VAT to a price</h2>
+    <p>Adding VAT is the sum most people need. If you have a price before tax, often called the net price, you multiply it by the rate and add the result on top. At the standard 20% rate the quick method is to multiply the net figure by 1.2. That single step gives you the final price including the tax.</p>
+    <div class="example"><b>Example.</b> A net price of &pound;100 becomes &pound;120 once you multiply by 1.2, so the VAT portion is &pound;20. A service priced at &pound;250 before tax becomes &pound;300, which means &pound;50 of VAT.</div>
+    <p>At the reduced 5% rate you multiply by 1.05 instead, so a &pound;100 net price becomes &pound;105.</p>
+
+    <h2 id="removing">Taking VAT off a price</h2>
+    <p>Removing VAT trips people up far more often, because you cannot simply take 20% off the gross figure. The tax was added to the smaller net amount, not the larger total, so the maths runs the other way. To remove 20% VAT you divide the gross price by 1.2.</p>
+    <div class="example"><b>Example.</b> A &pound;120 gross price divided by 1.2 gives &pound;100 net, which leaves &pound;20 of VAT. If you only want the VAT amount inside a gross price, divide the total by 6, because 20% expressed as part of the whole comes to one sixth. So &pound;120 divided by 6 is &pound;20.</div>
+    <p>For the reduced rate you divide the gross figure by 1.05 to reach the net price.</p>
+
+    <div class="callout">
+      <p>Doing these sums by hand is fine for a single invoice, but it gets slow once you have a long list of prices or you keep switching between adding and removing the tax. A calculator that handles both directions in one step takes away the risk of a slipped decimal point. You type in a figure, choose whether you are adding or removing the tax, and read off the net, the VAT and the gross straight away.</p>
+    </div>
+
+    <h2 id="register">When a business has to register</h2>
+    <p>A business must register for VAT once its taxable turnover passes the registration threshold, which currently sits at &pound;90,000 across any rolling twelve month period. You can also register before you reach that point, and some businesses choose to do so because it lets them reclaim the VAT they pay on their own costs. Once registered, you charge VAT on your sales, keep proper records, and send a VAT return to HMRC, usually every three months. Each return sets the VAT you have charged against the VAT you have paid, so you either pay the balance or claim a refund. Missing a deadline can lead to a penalty, so most businesses set a reminder a week or two before the return is due.</p>
+
+    <h2 id="mistakes">Common mistakes to avoid</h2>
+    <p>The most frequent slip is taking a flat 20% off a gross price to find the net figure. That always gives the wrong answer, because it ignores that the tax was worked out on the net amount in the first place. Another common error is mixing up zero rated and exempt goods, since the two are treated differently on a return. It also helps to keep your rounding consistent, as HMRC allows rounding but expects you to apply the same approach across a whole invoice.</p>
+
+    <h2 id="faq">Frequently asked questions</h2>
+    <div class="faq">
+      <h3>How do I add 20% VAT to a price?</h3>
+      <p>Multiply the price before tax by 1.2. The answer is the total including VAT, and the gap between the two figures is the VAT itself.</p>
+
+      <h3>How do I remove VAT from a total?</h3>
+      <p>Divide the gross total by 1.2 for the standard rate. To find only the VAT inside the total, divide it by 6.</p>
+
+      <h3>What is the current standard VAT rate in the UK?</h3>
+      <p>The standard rate is 20%. A reduced rate of 5% and a zero rate of 0% apply to certain goods and services.</p>
+
+      <h3>Do I have to register for VAT?</h3>
+      <p>You must register once your taxable turnover goes over &pound;90,000 in any twelve month period. You can register voluntarily below that level if it suits the way your business works.</p>
+
+      <h3>What is the difference between the net and gross price?</h3>
+      <p>The net price is the amount before VAT. The gross price is the amount once VAT has been added. The VAT itself is the difference between the two figures.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>UK VAT Guide is an information resource and does not provide tax advice. Rates and thresholds shown reflect the 2026 tax year. Always check your own figures with HMRC or a qualified accountant.</p>
+  </div>
+</footer>
+
+</body>
+</html>
