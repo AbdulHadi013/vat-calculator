@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vat-calculator-uk.vercel.app/sitemap.xml
